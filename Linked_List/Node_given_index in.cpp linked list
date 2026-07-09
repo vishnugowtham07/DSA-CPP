@@ -1,0 +1,16 @@
+
+class Solution {
+  public:
+    int GetNth(Node *head, int index) {
+        // Code Here
+        int count = 1;
+        Node* temp = head;
+        while(temp != NULL){
+            if(count == index)
+                return temp -> data;
+            temp = temp -> next;
+            count++;
+        }
+        return -1;
+    }
+};
